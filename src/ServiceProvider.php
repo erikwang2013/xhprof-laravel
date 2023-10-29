@@ -15,7 +15,7 @@ class XhprofServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/xhprof.php' => './config/xhprof.php',
             __DIR__.'/app/Http/Middleware/XhprofMiddleware.php' => './Middleware/XhprofMiddleware.php',
-            __DIR__.'public/html'=>'../html'
+            __DIR__.'public/html'=>'./html'
         ]);
     }
 
