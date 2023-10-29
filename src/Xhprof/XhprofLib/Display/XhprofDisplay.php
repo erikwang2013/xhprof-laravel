@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-namespace Aaron\Xhprof\Webman\XhprofLib\Display;
+namespace Aaron\Xhprof\XhprofLib\Display;
 
-use Aaron\Xhprof\Webman\XhprofLib\Utils\XhprofLib;
-use Aaron\Xhprof\Webman\XhprofLib\Utils\XHProfRunsDefault;
-use Aaron\Xhprof\Webman\Xhprof;
+use Aaron\Xhprof\XhprofLib\Utils\XhprofLib;
+use Aaron\Xhprof\XhprofLib\Utils\XHProfRunsDefault;
+use Aaron\Xhprof\Xhprof;
 
 class XhprofDisplay
 {
@@ -1390,7 +1390,7 @@ HTML;
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="https://github.com/erikwang2013/xhprof-webman" target="_blank" title="感谢Star支持！比心心！">>>> GitHub</a></li>
+			<li><a href="https://github.com/erikwang2013/xhprof-laravel" target="_blank" title="感谢Star支持！比心心！">>>> GitHub</a></li>
 		</ul>
 		</div>
 	</div>

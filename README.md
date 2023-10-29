@@ -36,7 +36,7 @@ composer require aaron-dev/xhprof-laravel
 
 namespace app\controller;
 
-use support\Request;
+use Illuminate\Http\Request;
 use Aaron\Xhprof\Webman\Xhprof;
 
 class TestController
