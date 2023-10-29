@@ -1,0 +1,44 @@
+{
+    "name": "aaron-dev/xhprof-level",
+    "description": "aaron-dev/xhprof is a code performance analysis plugin that is compatible with laravel. Mainly optimize and adjust the old and unusable xhprof for adapting to webman, making installation simple and fast.Developers can quickly access performance analysis reports through browsers to troubleshoot code performance issues.",
+    "keywords": [
+        "aaron",
+        "aaron-dev",
+        "erik",
+        "xhprof",
+        "laravel"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "erik",
+            "email": "erik@erik.xyz",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "erik@erik.xyz",
+        "issues": "https://github.com/erikwang2013/xhprof/issues",
+        "source": "https://github.com/erikwang2013/xhprof"
+      },
+    "require": {
+        "php": ">=7.4",
+        "ext-xhprof": "*",
+        "workerman/webman": "*",
+        "monolog/monolog": "*",
+        "illuminate/redis": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aaron\\Xhprof\\": "src/Xhprof"
+        }
+    },
+    "repositories": {
+        "packagist": {
+          "type": "composer",
+          "url": "https://mirrors.aliyun.com/composer/"
+        }
+      }
+}
