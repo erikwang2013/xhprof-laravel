@@ -1,6 +1,6 @@
 ## 简介 ##
-aaron-dev/xhprof-webman是一款适配webman的代码性能分析插件。
-主要对旧版且无法使用的xhprof做优化调整，用于适配webman，安装简单快捷。
+aaron-dev/xhprof-laravel是一款适配laravel的代码性能分析插件。
+主要对旧版且无法使用的xhprof做优化调整，用于适配laravel，安装简单快捷。
 开发者可以通过浏览器快速访问性能分析报告，排查代码性能问题。
 
 ## 安装 ##
@@ -16,7 +16,7 @@ xhprof.output_dir=/tmp/xhprof;
 
 Use [Composer](https://github.com/composer/composer):
 ```sh
-composer require aaron-dev/xhprof-webman
+composer require aaron-dev/xhprof-laravel
 ```
 
 ## 配置 ##
@@ -55,7 +55,7 @@ Route::get('/test', ['app\controller\TestController','index']);
 
 ```
 
-4. 基础配置在config/plugin/aaron-dev/xhprof/xhprof.php中
+4. 基础配置在config/xhprof.php中
 
 ```
 
