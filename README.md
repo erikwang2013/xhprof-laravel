@@ -28,7 +28,7 @@ composer require aaron-dev/xhprof-laravel
 
 
 
-1. 路由增加以下代码测试
+1.路由增加以下代码测试
 ```
 use App\Http\Middleware\XhprofMiddleware;
 
@@ -40,7 +40,7 @@ Route::get('/', function () {
 ```
 
 
-2. 基础配置在config/xhprof.php中
+2.基础配置在config/xhprof.php中
 
 ```
 
@@ -54,7 +54,7 @@ Route::get('/', function () {
 ```
 
 
-3. 增加访问控制器，然后就可以访问了
+3.增加访问控制器，然后就可以访问了
 ```
 <?php
 
