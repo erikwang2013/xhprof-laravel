@@ -18,44 +18,28 @@ Use [Composer](https://github.com/composer/composer):
 ```sh
 composer require aaron-dev/xhprof-laravel
 ```
+执行以下命令
+ ```
+  php artisan vendor:publish --provider="Aaron\Xhprof\XhprofServiceProvider"
+
+ ```
 
 ## 配置 ##
 
-1. config增加全局中间件
 
+
+1. 路由增加以下代码测试
 ```
-    '' => [
-        Aaron\Xhprof\Webman\XhprofMiddleware::class,
-    ]
-```
+use App\Http\Middleware\XhprofMiddleware;
 
-2. 创建控制器,复制下面代码
+Route::get('/', function () {
+    return view('welcome');
+})->middleware(XhprofMiddleware::class);
 
-```
-<?php
-
-namespace app\controller;
-
-use Illuminate\Http\Request;
-use Aaron\Xhprof\Webman\Xhprof;
-
-class TestController
-{
-    public function index(Request $request)
-    {
-        return Xhprof::index();
-    }
-}
 
 ```
 
-3. 路由增加以下代码
-```
-Route::get('/test', ['app\controller\TestController','index']);
-
-```
-
-4. 基础配置在config/xhprof.php中
+2. 基础配置在config/xhprof.php中
 
 ```
 
@@ -69,8 +53,8 @@ Route::get('/test', ['app\controller\TestController','index']);
 ```
 
 
-5. 然后重启服务就可以访问了。
-![](./doc/1.jpg)
-![](./doc/2.jpg)
+3.然后重启服务就可以访问了。
+!['aaron-dev/xhprof-laravel'](./doc/1.png)
 
-本插件参考[phacility/xhprof](https://github.com/phacility/xhprof)、[phpxxb/xhprof](https://github.com/xiexianbo123/xhprof)
+
+本插件参考[phacility/xhprof](https://github.com/phacility/xhprof)、[phpxxb/xhprof](https://github.com/xiexianbo123/xhprof)、[aaron-dev/xhprof-webman](https://github.com/erikwang2013/xhprof-webman)

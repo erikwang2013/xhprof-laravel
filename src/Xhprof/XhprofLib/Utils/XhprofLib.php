@@ -562,7 +562,7 @@ class XhprofLib
     $ignoreArr = Xhprof::$ignore_url_arr;
     if (!is_array($ignoreArr)) return true;
     //当前请求url
-    $request_uri = Xhprof::getRequest()->uri();
+    $request_uri = Xhprof::getRequest()->url();
     if (empty($request_uri)) return false;
     $request_uri = strtolower($request_uri);
     //是否需要忽略当前url
@@ -581,7 +581,7 @@ class XhprofLib
    */
   public static function xhprof_get_ip()
   {
-    return Xhprof::getRequest()->getRealIp($safe_mode = true);
+    return Xhprof::getRequest()->ip($safe_mode = true);
   }
 
   /**

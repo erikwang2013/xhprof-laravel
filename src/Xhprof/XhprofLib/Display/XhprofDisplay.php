@@ -11,7 +11,7 @@ class XhprofDisplay
 
   public static function base_path()
   {
-    $arr = parse_url(Xhprof::getRequest()->uri());
+    $arr = parse_url(Xhprof::getRequest()->url());
     return rtrim($arr['path'], '/\\');
   }
 

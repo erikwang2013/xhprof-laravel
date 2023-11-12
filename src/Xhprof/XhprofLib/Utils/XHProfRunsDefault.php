@@ -81,10 +81,8 @@ class XHProfRunsDefault implements XHProfRuns
         }
 
         $method = Xhprof::getRequest()->method();
-        $http = Xhprof::getRequest()->header('x-forwarded-proto');
-        $http = !empty($http) ? $http . "://" : "";
         $row = array(
-            'request_uri' => $http . Xhprof::getRequest()->host() . Xhprof::getRequest()->uri(),
+            'request_uri' => Xhprof::getRequest()->url(),
             'method'      => $method,
             'wt'          => $wt,
             'mu'          => $mu,
@@ -139,9 +137,7 @@ class XHProfRunsDefault implements XHProfRuns
             if (!is_array($request_arr)) continue;
             //耗时是否标红显示
             $wtClass = $request_arr['wt'] > Xhprof::$view_wtred ? "red" : "";
-            $http = Xhprof::getRequest()->header('x-forwarded-proto');
-            $http = !empty($http) ? $http . ":" : "http:";
-            $path = $http . Xhprof::getRequest()->url();
+            $path = Xhprof::getRequest()->url();
             $tr = '<tr>'
                 . '<td>' . $request_arr['method'] . '</td>'
                 . '<td><a href="' . htmlentities($path) . '?all=1&run=' . $run_id . '&source=xhprof_foo&requrl=' . urlencode($request_arr['request_uri']) . '">' . $request_arr['request_uri'] . "</a></td>"

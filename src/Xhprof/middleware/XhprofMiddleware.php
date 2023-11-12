@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
+use Closure;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Aaron\Xhprof\Xhprof;
@@ -13,9 +14,10 @@ use Aaron\Xhprof\Xhprof;
  */
 class XhprofMiddleware {
 
-    public function handle(Request $request, callable $next): Response
+    public function handle(Request $request, Closure $next): Response
     {
         $xhprof =config('xhprof.enable')?:false;
+        var_dump($xhprof);
         $extension = extension_loaded('xhprof');
         if(false==$extension) return response()->withBody("请安装xhprof扩展");
         $redis=extension_loaded("redis");
