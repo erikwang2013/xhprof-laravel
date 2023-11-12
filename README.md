@@ -39,6 +39,7 @@ Route::get('/', function () {
 
 ```
 
+
 2. 基础配置在config/xhprof.php中
 
 ```
@@ -53,7 +54,23 @@ Route::get('/', function () {
 ```
 
 
-3.然后重启服务就可以访问了。
+3. 增加访问控制器，然后就可以访问了
+```
+<?php
+
+namespace App\Http\Controllers;
+use Aaron\Xhprof\Xhprof;
+
+class IndexController extends Controller{
+
+
+    public function index(){
+        return Xhprof::index();
+    }
+}
+
+```
+
 !['aaron-dev/xhprof-laravel'](./doc/1.png)
 
 
